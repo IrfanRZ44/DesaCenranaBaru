@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1035553427344",
+    "firebase_url": "https://desa-cenrana-baru.firebaseio.com",
+    "project_id": "desa-cenrana-baru",
+    "storage_bucket": "desa-cenrana-baru.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035553427344:android:90d52240f4a8eebd3bad15",
+        "android_client_info": {
+          "package_name": "com.exomatik.desacenranabaru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035553427344-1giali4lfpbrdc0gksd2ceq07q713b14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.exomatik.desacenranabaru",
+            "certificate_hash": "fe275d47a55c0c14e1e8d99beb940a06fc301863"
+          }
+        },
+        {
+          "client_id": "1035553427344-jdcjur2qs0dpeaqn5pgn9i92nsftama0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM7k5ddw1SYZ5BdKcJ6hZ1RotQT1fa8rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035553427344-jdcjur2qs0dpeaqn5pgn9i92nsftama0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

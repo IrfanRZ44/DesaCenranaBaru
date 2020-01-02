@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Desa Cenrana Baru</string>
+    <string name="all_right_reserved">KKN UINAM ANGK. 61, DESA CENRANA BARU KABUPATEN MAROS</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="no_data">Belum ada data</string>
+    <string name="profil_desa">Profil Desa</string>
+    <string name="proker">Program Kerja</string>
+    <string name="add_proker">Tambah Program Kerja</string>
+    <string name="username">Username</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="login">Masuk</string>
+    <string name="logout">Keluar</string>
+    <string name="buat">Buat</string>
+    <string name="simpan">Simpan</string>
+    <string name="loginHeader">Silahkan Masuk</string>
+    <string name="text_desc_app">KKN UIN ALAUDDIN MAKASSAR ANGKATAN 61</string>
+
+    <string name="namaKegiatan">Nama Kegiatan</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="desc">Deskripsi</string>
+    <string name="foto">Foto</string>
+
+    <string name="et_format_tanggal">dd/mm/yyyy</string>
+
+    <string name="google_maps_key">AIzaSyDTIvPOsKEL7z6wBmQak9ggvVcvwaWUmVQ</string>
+</resources>

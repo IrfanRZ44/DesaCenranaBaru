@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00e676</color>
+    <color name="colorPrimaryDark">#2e7d32</color>
+    <color name="colorAccent">#00c853</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackSecondary">#1B1B1B</color>
+
+    <color name="gray1">#606060</color>
+    <color name="gray2">#BABABA</color>
+    <color name="gray3">#6E6E6E</color>
+
+    <color name="putihAsli">#ffffff</color>
+    <color name="putihGelap1">#b1b1b1</color>
+    <color name="putihGelap2">#878787</color>
+    <color name="putihGelap3">#5E5E5E</color>
+    <color name="putihGelap4">#6B6B6B</color>
+    <color name="putihGelap5">#F0F0F0</color>
+    <color name="putihGelap6">#F9B7A3</color>
+    <color name="putihGelap7">#707070</color>
+    <color name="putihGelap8">#C4C4C4</color>
+    <color name="putihGelap9">#808080</color>
+
+    <color name="biru1">#5574F7</color>
+    <color name="biru2">#60C3FF</color>
+    <color name="biru3">#051365</color>
+    <color name="biru4">#556AEF</color>
+    <color name="biru5">#4E62E6</color>
+    <color name="biru6">#B4BAF9</color>
+
+    <color name="green1">#52af44</color>
+    <color name="green2">#2d5e25</color>
+    <color name="green4">#9CCC65</color>
+    <color name="green5">#D7FFCF</color>
+    <color name="green6">#00C953</color>
+
+    <color name="red1">#F44336</color>
+    <color name="red2">#b92a1f</color>
+
+    <color name="putihBiru">#4e62e6</color>
+    <color name="putihBiruGelap">#2035c3</color>
+    <color name="putihBiruGelap2">#051365</color>
+
+    <color name="orange">#FF6B00</color>
+    <color name="orange2">#FF9A3E</color>
+</resources>

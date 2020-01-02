@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_standard">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/width150"
+            android:layout_height="@dimen/width150"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:background="@drawable/gradient_radius_primary"
+            android:elevation="@dimen/margin_standard"
+            android:padding="@dimen/margin_standard"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <com.exomatik.desacenranabaru.service.AviLoading.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imgLogo"
+            android:layout_marginTop="@dimen/margin_standard"
+            app:indicatorColor="@color/biru1"
+            app:indicatorName="LineScaleIndicator"
+            android:id="@+id/progress"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_big"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/width30"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:layout_marginRight="@dimen/width30"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/text_desc_app"
+            android:textAlignment="center"
+            android:textColor="@color/putihGelap3"
+            android:textSize="@dimen/text_big"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width30"
+            android:padding="@dimen/margin_standard_big"
+            android:text="@string/logout"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/textTitle2"
+            android:theme="@style/customButton"
+            />
+    </RelativeLayout>
+</RelativeLayout>

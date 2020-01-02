@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:n1="http://schemas.android.com/apk/res/android"
+    >
+    <group android:checkableBehavior="single"
+        android:id="@+id/nav_grup1"
+        android:visible="true"
+        >
+        <item
+            n1:id="@+id/navProker"
+            n1:icon="@drawable/ic_task_white"
+            n1:title="@string/proker" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/nav_grup2"
+        android:visible="true">
+        <item
+            n1:id="@+id/navProfil"
+            android:icon="@drawable/ic_person_white"
+            n1:title="@string/profil_desa" />
+    </group>
+</menu>
