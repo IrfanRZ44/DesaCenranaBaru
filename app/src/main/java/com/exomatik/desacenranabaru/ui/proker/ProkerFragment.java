@@ -1,8 +1,8 @@
 package com.exomatik.desacenranabaru.ui.proker;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
@@ -15,6 +15,7 @@ import com.exomatik.desacenranabaru.base.BaseFragment;
 import com.exomatik.desacenranabaru.model.ModelProker;
 import com.exomatik.desacenranabaru.ui.proker.adapter.RecyclerProker;
 import com.exomatik.desacenranabaru.utils.Constant;
+import com.exomatik.desacenranabaru.utils.ItemClickSupport;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -72,6 +73,31 @@ public class ProkerFragment extends BaseFragment {
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
                         , new TambahProkerFragment()).commit();
+            }
+        });
+
+        refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                list.removeAll(list);
+                adapter.notifyDataSetChanged();
+                getData();
+                refresh.setRefreshing(false);
+            }
+        });
+
+        ItemClickSupport.addTo(recycler).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                Intent intent = new Intent(getActivity(), DetailJasaAct.class);
+                intent.putExtra(Constant.nama, list.get(position).getNama());
+                intent.putExtra(Constant.foto, list.get(position).getFoto());
+                intent.putExtra(Constant.lokasi, list.get(position).getLokasi());
+                intent.putExtra(Constant.tanggal, list.get(position).getTanggal());
+                intent.putExtra(Constant.desc, list.get(position).getDesc());
+                intent.putExtra(Constant.id, list.get(position).getId());
+                startActivity(intent);
+                getActivity().finish();
             }
         });
     }

@@ -106,8 +106,16 @@ public class TambahProkerFragment extends BaseFragment {
 
     private void cekEditText() {
         String nama = etNama.getEditText().getText().toString();
-        if (nama.isEmpty()){
-            etNama.setError(Constant.dataKosong);
+        if (nama.isEmpty() || imageUri == null || locationPoint == null){
+            if (nama.isEmpty()){
+                etNama.setError(Constant.dataKosong);
+            }
+            else if (imageUri == null){
+                makeToast(Constant.fotoKosong);
+            }
+            else if (locationPoint == null){
+                makeToast(Constant.locationKosong);
+            }
         }
         else {
             setFoto();
@@ -142,7 +150,6 @@ public class TambahProkerFragment extends BaseFragment {
     }
 
     private void getUrlFoto(UploadTask.TaskSnapshot taskSnapshot){
-
         OnSuccessListener<Uri> onSuccessListener = new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {

@@ -51,7 +51,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/textTitle"
                 android:layout_marginTop="@dimen/margin_standard"
-                app:indicatorColor="@color/biru1"
+                app:indicatorColor="@color/colorPrimary"
                 app:indicatorName="LineScaleIndicator"
                 android:id="@+id/progress"
                 android:visibility="gone"

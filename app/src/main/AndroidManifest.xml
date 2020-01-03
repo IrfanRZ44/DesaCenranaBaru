@@ -19,6 +19,12 @@
         <activity android:name=".service.PickLocation.PickLocationAct"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".ui.proker.DetailJasaAct"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.image.DetailFotoAct"
+            android:screenOrientation="portrait"
+            />
         <activity android:name=".ui.splash.SplashAct"
             android:screenOrientation="portrait"
             >

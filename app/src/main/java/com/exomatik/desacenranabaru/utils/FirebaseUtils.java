@@ -2,6 +2,7 @@ package com.exomatik.desacenranabaru.utils;
 
 import android.content.Context;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -9,6 +10,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -21,6 +23,7 @@ import java.util.Iterator;
 public class FirebaseUtils {
     private FirebaseDatabase firebaseDatabase;
     private StorageReference storageReference;
+    private DatabaseReference databaseReference;
     private Context context;
 
     public FirebaseUtils(Context context) {
@@ -39,9 +42,31 @@ public class FirebaseUtils {
 
     public void getUrlFoto(UploadTask.TaskSnapshot taskSnapshot
             , OnSuccessListener<Uri> onSuccess
-            , OnFailureListener onFailureListener){
+            , OnFailureListener onFailureListener) {
         taskSnapshot.getStorage().getDownloadUrl()
                 .addOnSuccessListener(onSuccess)
+                .addOnFailureListener(onFailureListener);
+    }
+
+    public void hapusFoto(String urlFoto
+            , OnCompleteListener onCompleteListener
+            , OnFailureListener onFailureListener) {
+        storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(urlFoto);
+        storageReference.delete()
+                .addOnCompleteListener(onCompleteListener)
+                .addOnFailureListener(onFailureListener)
+        ;
+    }
+
+    public void hapusValue(String reference, String id
+            , OnCompleteListener onCompleteListener
+            , OnFailureListener onFailureListener) {
+
+        databaseReference = FirebaseDatabase.getInstance()
+                .getReference(reference)
+                .child(id);
+        databaseReference.removeValue()
+                .addOnCompleteListener(onCompleteListener)
                 .addOnFailureListener(onFailureListener);
     }
 

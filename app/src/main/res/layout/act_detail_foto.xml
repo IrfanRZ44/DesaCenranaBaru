@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/margin_small"
+        android:id="@+id/rlTop"
+        android:background="@drawable/radius_bottom_gradient"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width25"
+            android:id="@+id/actionBar"
+            />
+
+        <ImageButton
+            android:id="@+id/imgBack"
+            android:layout_below="@+id/actionBar"
+            android:layout_width="@dimen/width30"
+            android:layout_height="@dimen/width30"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/width30"
+            android:background="@drawable/border_circle_transparent_gray"
+            android:src="@drawable/ic_arrow_white"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_big"
+            android:textStyle="bold"
+            android:fontFamily="@font/open_sans"
+            android:id="@+id/textTujuan"
+            android:layout_centerHorizontal="true"
+            android:text="@string/foto"
+            android:layout_below="@+id/actionBar"
+            android:layout_marginBottom="@dimen/margin_standard_big"
+            />
+    </RelativeLayout>
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/img"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"
+        />
+    <com.exomatik.desacenranabaru.service.AviLoading.AVLoadingIndicatorView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="LineScaleIndicator"
+        android:id="@+id/progress"
+        />
+</RelativeLayout>
