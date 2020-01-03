@@ -18,7 +18,6 @@
     <string name="text_desc_app">KKN UIN ALAUDDIN MAKASSAR ANGKATAN 61</string>
 
     <string name="namaKegiatan">Nama Kegiatan</string>
-    <string name="lokasi">Lokasi</string>
     <string name="tanggal">Tanggal</string>
     <string name="desc">Deskripsi</string>
     <string name="foto">Foto</string>
@@ -26,4 +25,8 @@
     <string name="et_format_tanggal">dd/mm/yyyy</string>
 
     <string name="google_maps_key">AIzaSyDTIvPOsKEL7z6wBmQak9ggvVcvwaWUmVQ</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="lokasi_anda">Lokasi Anda</string>
+    <string name="detail_program_kerja">Detail Program Kerja</string>
+    <string name="lokasi_desa_cenrana_baru">Lokasi Desa Cenrana Baru</string>
 </resources>

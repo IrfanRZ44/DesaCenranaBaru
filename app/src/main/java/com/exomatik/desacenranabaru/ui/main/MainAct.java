@@ -1,5 +1,6 @@
 package com.exomatik.desacenranabaru.ui.main;
 
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -13,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.exomatik.desacenranabaru.R;
 import com.exomatik.desacenranabaru.base.BaseActivity;
+import com.exomatik.desacenranabaru.ui.location.LocationAct;
 import com.exomatik.desacenranabaru.ui.proker.ProkerFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthLoginFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthAdminFragment;
@@ -102,6 +104,9 @@ public class MainAct extends BaseActivity {
                 else if (id == R.id.navProfil){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
                             , fragmentAdmin).commit();
+                }
+                else if (id == R.id.navLokasi){
+                    startActivity(new Intent(MainAct.this, LocationAct.class));
                 }
 
                 drawer.closeDrawer(GravityCompat.START);

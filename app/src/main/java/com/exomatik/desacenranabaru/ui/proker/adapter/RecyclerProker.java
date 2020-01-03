@@ -1,17 +1,16 @@
 package com.exomatik.desacenranabaru.ui.proker.adapter;
 
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.exomatik.desacenranabaru.R;
 import com.exomatik.desacenranabaru.model.ModelProker;
+import com.exomatik.desacenranabaru.utils.Constant;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -40,12 +39,11 @@ public class RecyclerProker extends RecyclerView.Adapter<RecyclerProker.bidangVi
         return new bidangViewHolder(view);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(bidangViewHolder holder, final int position) {
         holder.textNama.setText(dataList.get(position).getNama());
-        holder.textJK.setText(dataList.get(position).getTanggal());
-        holder.textNIK.setText(dataList.get(position).getDesc());
+        holder.textTanggal.setText(Constant.tanggal + Constant.titikDua + dataList.get(position).getTanggal());
+        holder.textDesc.setText(Constant.desc + Constant.titikDua + dataList.get(position).getDesc());
         Picasso.with(context).load(dataList.get(position).getFoto()).into(holder.img);
     }
 
@@ -55,7 +53,7 @@ public class RecyclerProker extends RecyclerView.Adapter<RecyclerProker.bidangVi
     }
 
     public class bidangViewHolder extends RecyclerView.ViewHolder {
-        private TextView textNama, textStatus, textJK, textNIK;
+        private TextView textNama, textStatus, textTanggal, textDesc;
         private CircleImageView img;
 
         public bidangViewHolder(View itemView) {
@@ -63,8 +61,8 @@ public class RecyclerProker extends RecyclerView.Adapter<RecyclerProker.bidangVi
 
             textNama = itemView.findViewById(R.id.textNama);
             textStatus = itemView.findViewById(R.id.textStatus);
-            textJK = itemView.findViewById(R.id.textJK);
-            textNIK = itemView.findViewById(R.id.textNIK);
+            textTanggal = itemView.findViewById(R.id.textJK);
+            textDesc = itemView.findViewById(R.id.textNIK);
             img = itemView.findViewById(R.id.img);
         }
     }

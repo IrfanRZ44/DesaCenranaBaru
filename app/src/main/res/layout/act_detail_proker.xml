@@ -58,20 +58,8 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_marginTop="@dimen/text_big"
-                    android:text="Lokasi Anda"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/putihAsli"
-                    android:textSize="@dimen/text_standard_et"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/open_sans"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/margin_small"
-                    android:layout_marginBottom="@dimen/text_big"
-                    android:id="@+id/textAlamat"
-                    android:textAlignment="center"
+                    android:layout_marginBottom="@dimen/margin_standard_big"
+                    android:text="@string/detail_program_kerja"
                     />
 
             </LinearLayout>

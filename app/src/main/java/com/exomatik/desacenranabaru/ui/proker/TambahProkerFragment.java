@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import com.exomatik.desacenranabaru.R;
 import com.exomatik.desacenranabaru.base.BaseFragment;
 import com.exomatik.desacenranabaru.model.ModelProker;
-import com.exomatik.desacenranabaru.service.PickLocation.PickLocationAct;
+import com.exomatik.desacenranabaru.ui.location.PickLocationAct;
 import com.exomatik.desacenranabaru.utils.Constant;
 import com.exomatik.desacenranabaru.utils.FileUtils;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,7 +23,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 

@@ -44,7 +44,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/text_big"
-                android:text="Lokasi Anda"
+                android:text="@string/lokasi_anda"
                 />
             <TextView
                 android:layout_width="wrap_content"

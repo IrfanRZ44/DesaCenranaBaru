@@ -1,4 +1,4 @@
-package com.exomatik.desacenranabaru.service.PickLocation;
+package com.exomatik.desacenranabaru.ui.location;
 
 import android.Manifest;
 import android.content.Context;
