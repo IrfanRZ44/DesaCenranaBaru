@@ -29,4 +29,7 @@
     <string name="lokasi_anda">Lokasi Anda</string>
     <string name="detail_program_kerja">Detail Program Kerja</string>
     <string name="lokasi_desa_cenrana_baru">Lokasi Desa Cenrana Baru</string>
+    <string name="visi_dan_misi">Visi dan Misi</string>
+    <string name="misi">Misi</string>
+    <string name="visi">Visi</string>
 </resources>

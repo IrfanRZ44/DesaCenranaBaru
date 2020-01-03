@@ -18,6 +18,7 @@ import com.exomatik.desacenranabaru.ui.location.LocationAct;
 import com.exomatik.desacenranabaru.ui.proker.ProkerFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthLoginFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthAdminFragment;
+import com.exomatik.desacenranabaru.ui.visi.VisiFragment;
 import com.exomatik.desacenranabaru.utils.Constant;
 import com.google.android.material.navigation.NavigationView;
 
@@ -29,9 +30,6 @@ public class MainAct extends BaseActivity {
     private Toolbar toolbar;
     private AppCompatTextView textHeader;
     private AppCompatImageButton btnProfile;
-    private ProkerFragment fragmentKegiatan;
-    private AuthLoginFragment fragmentLogin;
-    private AuthAdminFragment fragmentAdmin;
 
     @Override
     protected void myCodeHere() {
@@ -57,15 +55,11 @@ public class MainAct extends BaseActivity {
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        fragmentKegiatan = new ProkerFragment();
-        fragmentLogin = new AuthLoginFragment();
-        fragmentAdmin = new AuthAdminFragment();
     }
 
     private void setFragment() {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                , fragmentKegiatan).commit();
+                , new ProkerFragment()).commit();
     }
 
     @Override
@@ -83,11 +77,11 @@ public class MainAct extends BaseActivity {
             public void onClick(View v) {
                 if (userPreferences.getSaveString(Constant.savedUser).equals(Constant.userName)){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                            , fragmentAdmin).commit();
+                            , new AuthAdminFragment()).commit();
                 }
                 else {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                            , fragmentLogin).commit();
+                            , new AuthLoginFragment()).commit();
                 }
             }
         });
@@ -98,15 +92,19 @@ public class MainAct extends BaseActivity {
                 int id = menuItem.getItemId();
                 if (id == R.id.navProker){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                            , fragmentKegiatan).commit();
+                            , new ProkerFragment()).commit();
 
-                }
-                else if (id == R.id.navProfil){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                            , fragmentAdmin).commit();
                 }
                 else if (id == R.id.navLokasi){
                     startActivity(new Intent(MainAct.this, LocationAct.class));
+                }
+                else if (id == R.id.navVisi){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
+                            , new VisiFragment()).commit();
+                }
+                else if (id == R.id.navProfil){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
+                            , new AuthAdminFragment()).commit();
                 }
 
                 drawer.closeDrawer(GravityCompat.START);

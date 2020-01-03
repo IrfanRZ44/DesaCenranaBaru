@@ -15,16 +15,24 @@
         android:id="@+id/nav_grup2"
         android:visible="true">
         <item
-            n1:id="@+id/navProfil"
-            android:icon="@drawable/ic_person_white"
-            n1:title="@string/profil_desa" />
+            n1:id="@+id/navLokasi"
+            android:icon="@drawable/ic_location_white"
+            n1:title="@string/lokasi" />
     </group>
     <group android:checkableBehavior="single"
         android:id="@+id/nav_grup3"
         android:visible="true">
         <item
-            n1:id="@+id/navLokasi"
-            android:icon="@drawable/ic_location_white"
-            n1:title="@string/lokasi" />
+            n1:id="@+id/navVisi"
+            android:icon="@drawable/logo"
+            n1:title="@string/visi_dan_misi" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/nav_grup4"
+        android:visible="true">
+        <item
+            n1:id="@+id/navProfil"
+            android:icon="@drawable/ic_person_white"
+            n1:title="@string/profil_desa" />
     </group>
 </menu>

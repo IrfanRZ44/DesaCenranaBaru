@@ -2,10 +2,11 @@ package com.exomatik.desacenranabaru.utils;
 
 public class Constant {
     public static String appName = "Desa Cenrana Baru";
+    public static String kantorDesa = "Kantor Desa Cenrana Baru";
     public static String userName = "admin";
     public static String password = "kknuinam61";
-    public static String latitude = "-4.561852";
-    public static String longitude = "119.482941";
+    public static String latitude = "-4.98451";
+    public static String longitude = "119.8211";
 
     public static String savedUser = "savedUser";
     //AdapterGridKontak
@@ -32,9 +33,13 @@ public class Constant {
     public static String deleteFotoSucces = "Berhasil Hapus Foto";
     public static String deleteValueSucces = "Berhasil Hapus Data";
     public static String addValueFailed = "Gagal Kirim Data";
+    public static String noMisi = "Belum ada Misi";
+    public static String noVisi = "Belum ada Visi";
     public static String koneksiGagal = "Periksa Koneksi Anda";
 
     public static String proker = "Proker";
+    public static String visi = "Visi";
+    public static String misi = "Misi";
     public static String fotoProker = "FotoProker";
     public static String login = "Login";
     public static String nama = "Nama";

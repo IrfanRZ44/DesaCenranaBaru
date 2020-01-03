@@ -40,6 +40,15 @@ public class FirebaseUtils {
                 .addOnFailureListener(onFailureListener);
     }
 
+    public void setValueVisi(String reference, Object object, OnFailureListener onFailureListener,
+                         OnCompleteListener onCompleteListener) {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase.getReference(reference)
+                .setValue(object)
+                .addOnCompleteListener(onCompleteListener)
+                .addOnFailureListener(onFailureListener);
+    }
+
     public void getUrlFoto(UploadTask.TaskSnapshot taskSnapshot
             , OnSuccessListener<Uri> onSuccess
             , OnFailureListener onFailureListener) {
@@ -82,6 +91,13 @@ public class FirebaseUtils {
     public void getAllValue(String reference, ValueEventListener valueEventListener) {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseDatabase.getReference(reference)
+                .addListenerForSingleValueEvent(valueEventListener);
+    }
+
+    public void getAllValueWithChild(String reference, String child, ValueEventListener valueEventListener) {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase.getReference(reference)
+                .child(child)
                 .addListenerForSingleValueEvent(valueEventListener);
     }
 }
