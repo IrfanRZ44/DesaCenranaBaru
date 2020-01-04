@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/margin_standard"
         >
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:fontFamily="@font/open_sans"
             android:maxLines="2"
             />
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             android:fontFamily="@font/open_sans"
             android:maxLines="1"
             />
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textJK"
             android:layout_below="@+id/textNama"
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:fontFamily="@font/open_sans"
             android:maxLines="1"
             />
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textNIK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

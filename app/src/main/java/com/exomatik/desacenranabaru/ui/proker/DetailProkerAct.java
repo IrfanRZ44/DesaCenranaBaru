@@ -3,14 +3,12 @@ package com.exomatik.desacenranabaru.ui.proker;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 
 import com.exomatik.desacenranabaru.R;
@@ -32,7 +30,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.squareup.picasso.Picasso;
 
-public class DetailJasaAct extends BaseActivity implements OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener {
+public class DetailProkerAct extends BaseActivity implements OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener {
     @Override protected Integer getLayoutResources() { return R.layout.act_detail_proker; }
     @Override protected Integer getThemeResources() { return R.style.CustomStyle; }
     private ModelProker dataProker;
@@ -93,7 +91,7 @@ public class DetailJasaAct extends BaseActivity implements OnMapReadyCallback, G
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DetailJasaAct.this, MainAct.class));
+                startActivity(new Intent(DetailProkerAct.this, MainAct.class));
                 finish();
             }
         });
@@ -102,8 +100,9 @@ public class DetailJasaAct extends BaseActivity implements OnMapReadyCallback, G
             @Override
             public void onClick(View v) {
                 if (dataProker.getFoto() != null){
-                    Intent intent = new Intent(DetailJasaAct.this, DetailFotoAct.class);
-                    intent.putExtra(Constant.fotoProker, dataProker.getFoto());
+                    Intent intent = new Intent(DetailProkerAct.this, DetailFotoAct.class);
+                    intent.putExtra(Constant.request, 0);
+                    intent.putExtra(Constant.foto, dataProker.getFoto());
                     startActivity(intent);
                 }
             }
@@ -118,7 +117,7 @@ public class DetailJasaAct extends BaseActivity implements OnMapReadyCallback, G
     }
 
     private void alertSure() {
-        AlertDialog.Builder alert = new AlertDialog.Builder(DetailJasaAct.this);
+        AlertDialog.Builder alert = new AlertDialog.Builder(DetailProkerAct.this);
         alert.setTitle(Constant.wantDeleteProker);
         alert.setPositiveButton(Constant.iya, new DialogInterface.OnClickListener() {
             @Override
@@ -171,7 +170,7 @@ public class DetailJasaAct extends BaseActivity implements OnMapReadyCallback, G
                 if (task.isSuccessful()){
                     makeToast(Constant.deleteValueSucces);
                     progressDialog.dismiss();
-                    startActivity(new Intent(DetailJasaAct.this, MainAct.class));
+                    startActivity(new Intent(DetailProkerAct.this, MainAct.class));
                     finish();
                 }
                 else {
@@ -210,7 +209,7 @@ public class DetailJasaAct extends BaseActivity implements OnMapReadyCallback, G
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(DetailJasaAct.this, MainAct.class));
+        startActivity(new Intent(DetailProkerAct.this, MainAct.class));
         finish();
     }
 }

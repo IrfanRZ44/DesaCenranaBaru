@@ -84,7 +84,7 @@
                 android:id="@+id/text_pr"
                 android:textColor="@color/colorBlack"
                 android:textSize="15sp"
-                android:text="Nama Program : "
+                android:text="@string/nama_program"
                 android:layout_marginTop="@dimen/margin_small"
                 />
             <TextView
@@ -103,7 +103,7 @@
                 android:layout_below="@+id/text_nama"
                 android:textColor="@color/colorBlack"
                 android:textSize="15sp"
-                android:text="Tanggal : "
+                android:text="@string/tanggal2"
                 android:layout_marginTop="@dimen/margin_small"
                 />
             <TextView
@@ -123,7 +123,7 @@
                 android:layout_below="@+id/text_tanggal"
                 android:textColor="@color/colorBlack"
                 android:textSize="15sp"
-                android:text="Deskripsi : "
+                android:text="@string/deskripsi2"
                 android:layout_marginTop="@dimen/margin_small"
                 />
             <TextView
@@ -144,7 +144,7 @@
                 android:layout_below="@+id/text_desc"
                 android:textColor="@color/colorBlack"
                 android:textSize="15sp"
-                android:text="Foto Jasa : "
+                android:text="@string/foto2"
                 android:layout_marginTop="@dimen/margin_small"
                 />
             <ImageView

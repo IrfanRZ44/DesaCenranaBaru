@@ -8,6 +8,7 @@
     <string name="profil_desa">Profil Desa</string>
     <string name="proker">Program Kerja</string>
     <string name="add_proker">Tambah Program Kerja</string>
+    <string name="add_wisata">Tambah Objek Wisata</string>
     <string name="username">Username</string>
     <string name="kata_sandi">Kata Sandi</string>
     <string name="login">Masuk</string>
@@ -18,6 +19,7 @@
     <string name="text_desc_app">KKN UIN ALAUDDIN MAKASSAR ANGKATAN 61</string>
 
     <string name="namaKegiatan">Nama Kegiatan</string>
+    <string name="namaWisata">Nama Objek Wisata</string>
     <string name="tanggal">Tanggal</string>
     <string name="desc">Deskripsi</string>
     <string name="foto">Foto</string>
@@ -28,8 +30,18 @@
     <string name="lokasi">Lokasi</string>
     <string name="lokasi_anda">Lokasi Anda</string>
     <string name="detail_program_kerja">Detail Program Kerja</string>
+    <string name="detail_wisata">Detail Objek Wisata</string>
     <string name="lokasi_desa_cenrana_baru">Lokasi Desa Cenrana Baru</string>
     <string name="visi_dan_misi">Visi dan Misi</string>
     <string name="misi">Misi</string>
     <string name="visi">Visi</string>
+    <string name="objek_wisata">Objek Wisata</string>
+    <string name="nama_program">Nama Program :</string>
+    <string name="tanggal2">Tanggal :</string>
+    <string name="deskripsi2">Deskripsi :</string>
+    <string name="foto2">Foto :</string>
+    <string name="nama_objek_wisata">Nama Objek Wisata :</string>
+    <string name="foto_wisata">Foto Wisata :</string>
+    <string name="pilih_foto">Pilih Foto</string>
+    <string name="batal">Batal</string>
 </resources>

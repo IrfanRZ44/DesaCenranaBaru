@@ -31,6 +31,14 @@
         android:id="@+id/nav_grup4"
         android:visible="true">
         <item
+            n1:id="@+id/navWisata"
+            android:icon="@drawable/ic_wisata_white"
+            n1:title="@string/objek_wisata" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/nav_grup5"
+        android:visible="true">
+        <item
             n1:id="@+id/navProfil"
             android:icon="@drawable/ic_person_white"
             n1:title="@string/profil_desa" />

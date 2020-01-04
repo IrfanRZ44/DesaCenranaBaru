@@ -98,7 +98,9 @@ public class TambahProkerFragment extends BaseFragment {
         btnPickAlamat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().startActivity(new Intent(getActivity(), PickLocationAct.class));
+                Intent intent = new Intent(getActivity(), PickLocationAct.class);
+                intent.putExtra(Constant.lokasi, 0);
+                getActivity().startActivity(intent);
             }
         });
     }
@@ -141,8 +143,6 @@ public class TambahProkerFragment extends BaseFragment {
                 btnDone.setEnabled(true);
             }
         };
-
-
 
         firebaseUtils.setFoto(Long.toString(System.currentTimeMillis()), imageUri, Constant.fotoProker
                 , onSuccessListener, onFailureListener);

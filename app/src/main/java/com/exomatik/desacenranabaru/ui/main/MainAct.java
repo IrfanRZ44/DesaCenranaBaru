@@ -19,6 +19,7 @@ import com.exomatik.desacenranabaru.ui.proker.ProkerFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthLoginFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthAdminFragment;
 import com.exomatik.desacenranabaru.ui.visi.VisiFragment;
+import com.exomatik.desacenranabaru.ui.wisata.WisataFragment;
 import com.exomatik.desacenranabaru.utils.Constant;
 import com.google.android.material.navigation.NavigationView;
 
@@ -101,6 +102,10 @@ public class MainAct extends BaseActivity {
                 else if (id == R.id.navVisi){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
                             , new VisiFragment()).commit();
+                }
+                else if (id == R.id.navWisata){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
+                            , new WisataFragment()).commit();
                 }
                 else if (id == R.id.navProfil){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container

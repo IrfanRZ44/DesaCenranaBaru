@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_bottom_gradient"
+        android:elevation="@dimen/margin_small">
+
+        <ImageButton
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/width30"
+            android:layout_height="@dimen/width30"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width30"
+            android:background="@drawable/border_circle_transparent_gray"
+            android:src="@drawable/ic_arrow_white" />
+
+        <ImageButton
+            android:id="@+id/imgHapus"
+            android:layout_width="@dimen/width30"
+            android:layout_height="@dimen/width30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width30"
+            android:background="@drawable/border_circle_transparent_gray"
+            android:src="@drawable/ic_delete_red"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/width40"
+            android:layout_toRightOf="@+id/imgBack"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_standard_big" />
+
+            <TextView
+                android:id="@+id/textTujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/text_big"
+                android:layout_marginBottom="@dimen/margin_standard_big"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="@string/detail_wisata"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_big"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/map"
+        android:background="@color/putihAsli"
+        android:padding="@dimen/margin_standard">
+
+        <TextView
+            android:id="@+id/text_pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/nama_objek_wisata"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/text_pr"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_al"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_nama"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/deskripsi2"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_nama"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@+id/text_al"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_a5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_desc"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/foto_wisata"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+        <com.exomatik.desacenranabaru.service.AviLoading.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_a5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="LineScaleIndicator"
+            android:id="@+id/progress"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler"
+            android:layout_below="@+id/progress"
+            android:layout_marginTop="@dimen/margin_standard"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rlAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_standard"
+                android:layout_marginBottom="@dimen/margin_standard"
+                android:src="@drawable/ic_add_white"
+                app:fabSize="normal"
+                app:maxImageSize="@dimen/width40" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

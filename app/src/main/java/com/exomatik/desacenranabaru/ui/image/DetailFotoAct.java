@@ -15,6 +15,7 @@ public class DetailFotoAct extends BaseActivity {
     @Override protected Integer getLayoutResources() { return R.layout.act_detail_foto; }
     private PhotoView img;
     private String urlFoto;
+    private Integer request;
     private ImageButton imgBack;
 
     @Override
@@ -35,7 +36,8 @@ public class DetailFotoAct extends BaseActivity {
     }
 
     private void setData() {
-        urlFoto = getIntent().getStringExtra(Constant.fotoProker);
+        request = getIntent().getIntExtra(Constant.request, 0);
+        urlFoto = getIntent().getStringExtra(Constant.foto);
 
         try {
             Picasso.with(this).load(urlFoto).into(img);

@@ -22,7 +22,10 @@
         <activity android:name=".ui.location.LocationAct"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".ui.proker.DetailJasaAct"
+        <activity android:name=".ui.proker.DetailProkerAct"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.wisata.DetailWisataAct"
             android:screenOrientation="portrait"
             />
         <activity android:name=".ui.image.DetailFotoAct"

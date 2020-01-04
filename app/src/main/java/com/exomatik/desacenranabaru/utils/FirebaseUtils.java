@@ -40,8 +40,19 @@ public class FirebaseUtils {
                 .addOnFailureListener(onFailureListener);
     }
 
-    public void setValueVisi(String reference, Object object, OnFailureListener onFailureListener,
+    public void setValueWithChild(String reference, String childId, String childId2, Object object, OnFailureListener onFailureListener,
                          OnCompleteListener onCompleteListener) {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase.getReference(reference)
+                .child(childId)
+                .child(childId2)
+                .setValue(object)
+                .addOnCompleteListener(onCompleteListener)
+                .addOnFailureListener(onFailureListener);
+    }
+
+    public void setValueNoChild(String reference, Object object, OnFailureListener onFailureListener,
+                                OnCompleteListener onCompleteListener) {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseDatabase.getReference(reference)
                 .setValue(object)
@@ -79,11 +90,38 @@ public class FirebaseUtils {
                 .addOnFailureListener(onFailureListener);
     }
 
+    public void hapusValueWithChild(String reference, String idChild, String id
+            , OnCompleteListener onCompleteListener
+            , OnFailureListener onFailureListener) {
+
+        databaseReference = FirebaseDatabase.getInstance()
+                .getReference(reference)
+                .child(idChild)
+                .child(id);
+        databaseReference.removeValue()
+                .addOnCompleteListener(onCompleteListener)
+                .addOnFailureListener(onFailureListener);
+    }
+
+    public void hapusValueWithMoreChild(String reference, String idChild, String idChild2, String id
+            , OnCompleteListener onCompleteListener
+            , OnFailureListener onFailureListener) {
+
+        databaseReference = FirebaseDatabase.getInstance()
+                .getReference(reference)
+                .child(idChild)
+                .child(idChild2)
+                .child(id);
+        databaseReference.removeValue()
+                .addOnCompleteListener(onCompleteListener)
+                .addOnFailureListener(onFailureListener);
+    }
+
     public void setFoto(String id, Uri image, String child
             , OnSuccessListener<UploadTask.TaskSnapshot> onSuccessListener
             , OnFailureListener onFailureListener) {
         storageReference = FirebaseStorage.getInstance().getReference();
-        final String file = id + "_" + image.getLastPathSegment();
+        final String file = id;
         storageReference.child(child + "/" + file).putFile(image).addOnSuccessListener(onSuccessListener)
                 .addOnFailureListener(onFailureListener);
     }

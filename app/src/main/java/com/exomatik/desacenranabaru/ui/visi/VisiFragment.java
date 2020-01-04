@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 
 import com.exomatik.desacenranabaru.R;
 import com.exomatik.desacenranabaru.base.BaseFragment;
-import com.exomatik.desacenranabaru.model.ModelProker;
 import com.exomatik.desacenranabaru.model.ModelVisi;
 import com.exomatik.desacenranabaru.ui.proker.ProkerFragment;
 import com.exomatik.desacenranabaru.utils.Constant;
@@ -18,8 +17,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.Iterator;
 
 public class VisiFragment extends BaseFragment {
     @Override protected Integer getLayoutResource() { return R.layout.fragment_visi; }
@@ -137,6 +134,6 @@ public class VisiFragment extends BaseFragment {
 
         showLoading(true);
         btnSimpan.setEnabled(false);
-        firebaseUtils.setValueVisi(Constant.visi, modelVisi, onFailureListener, onCompleteListener);
+        firebaseUtils.setValueNoChild(Constant.visi, modelVisi, onFailureListener, onCompleteListener);
     }
 }

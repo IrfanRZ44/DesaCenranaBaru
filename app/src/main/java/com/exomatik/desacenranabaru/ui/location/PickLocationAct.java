@@ -20,6 +20,8 @@ import androidx.core.content.ContextCompat;
 
 import com.exomatik.desacenranabaru.R;
 import com.exomatik.desacenranabaru.ui.proker.TambahProkerFragment;
+import com.exomatik.desacenranabaru.ui.wisata.TambahWisataFragment;
+import com.exomatik.desacenranabaru.utils.Constant;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -32,7 +34,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 public class PickLocationAct extends AppCompatActivity implements OnMapReadyCallback, LocationListener {
-    public static String latitudeDestination, longitudeDestination;
+    private String latitudeDestination, longitudeDestination;
     private ImageButton imgBack, btnFinish;
     private TextView textTujuan, textAlamat;
     private GoogleMap mMap;
@@ -129,7 +131,12 @@ public class PickLocationAct extends AppCompatActivity implements OnMapReadyCall
         btnFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TambahProkerFragment.locationPoint = latitudeDestination + ";" + longitudeDestination;
+                if (getIntent().getIntExtra(Constant.lokasi, 0) == 0){
+                    TambahProkerFragment.locationPoint = latitudeDestination + ";" + longitudeDestination;
+                }
+                else if (getIntent().getIntExtra(Constant.lokasi, 0) == 1){
+                    TambahWisataFragment.locationPoint = latitudeDestination + ";" + longitudeDestination;
+                }
                 finish();
             }
         });

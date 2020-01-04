@@ -1,4 +1,4 @@
-package com.exomatik.desacenranabaru.ui.proker;
+package com.exomatik.desacenranabaru.ui.wisata;
 
 import android.content.Intent;
 import android.view.View;
@@ -12,8 +12,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.exomatik.desacenranabaru.R;
 import com.exomatik.desacenranabaru.base.BaseFragment;
-import com.exomatik.desacenranabaru.model.ModelProker;
-import com.exomatik.desacenranabaru.ui.proker.adapter.RecyclerProker;
+import com.exomatik.desacenranabaru.model.ModelWisata;
+import com.exomatik.desacenranabaru.ui.wisata.adapter.RecyclerWisata;
 import com.exomatik.desacenranabaru.utils.Constant;
 import com.exomatik.desacenranabaru.utils.ItemClickSupport;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,15 +24,15 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ProkerFragment extends BaseFragment {
-    @Override protected Integer getLayoutResource() { return R.layout.fragment_proker; }
+public class WisataFragment extends BaseFragment {
+    @Override protected Integer getLayoutResource() { return R.layout.fragment_wisata; }
     private RelativeLayout rlAdd;
     private FloatingActionButton btnAdd;
     private RecyclerView recycler;
     private AppCompatTextView textNoData;
     private SwipeRefreshLayout refresh;
-    private RecyclerProker adapter;
-    private ArrayList<ModelProker> list = new ArrayList<>();
+    private RecyclerWisata adapter;
+    private ArrayList<ModelWisata> list = new ArrayList<>();
 
     @Override
     protected void myCodeHere() {
@@ -52,15 +52,15 @@ public class ProkerFragment extends BaseFragment {
     }
 
     private void setData() {
-        if (userPreferences.getSaveString(Constant.savedUser) != null){
-            if (userPreferences.getSaveString(Constant.savedUser).equals(Constant.userName)){
+        if (userPreferences.getSaveString(Constant.savedUser) != null) {
+            if (userPreferences.getSaveString(Constant.savedUser).equals(Constant.userName)) {
                 rlAdd.setVisibility(View.VISIBLE);
             }
         }
     }
 
     private void setAdapter() {
-        adapter = new RecyclerProker(list, getActivity());
+        adapter = new RecyclerWisata(list, getActivity());
         LinearLayoutManager localLinearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recycler.setLayoutManager(localLinearLayoutManager);
         recycler.setNestedScrollingEnabled(false);
@@ -72,7 +72,7 @@ public class ProkerFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                        , new TambahProkerFragment()).commit();
+                        , new TambahWisataFragment()).commit();
             }
         });
 
@@ -89,20 +89,19 @@ public class ProkerFragment extends BaseFragment {
         ItemClickSupport.addTo(recycler).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                Intent intent = new Intent(getActivity(), DetailProkerAct.class);
-                intent.putExtra(Constant.nama, list.get(position).getNama());
-                intent.putExtra(Constant.foto, list.get(position).getFoto());
+                Intent intent = new Intent(getActivity(), DetailWisataAct.class);
+                intent.putExtra(Constant.nama, list.get(position).getNamaWisata());
                 intent.putExtra(Constant.lokasi, list.get(position).getLokasi());
-                intent.putExtra(Constant.tanggal, list.get(position).getTanggal());
                 intent.putExtra(Constant.desc, list.get(position).getDesc());
                 intent.putExtra(Constant.id, list.get(position).getId());
+                intent.putStringArrayListExtra(Constant.foto, list.get(position).getListFoto());
                 startActivity(intent);
                 getActivity().finish();
             }
         });
     }
 
-    private void getData(){
+    private void getData() {
         showLoading(true);
         ValueEventListener valueEvent = new ValueEventListener() {
             @Override
@@ -112,7 +111,7 @@ public class ProkerFragment extends BaseFragment {
                 if (dataSnapshot.exists()) {
                     Iterator localIterator = dataSnapshot.getChildren().iterator();
                     while (localIterator.hasNext()) {
-                        ModelProker localDataUser = ((DataSnapshot) localIterator.next()).getValue(ModelProker.class);
+                        ModelWisata localDataUser = ((DataSnapshot) localIterator.next()).getValue(ModelWisata.class);
 
                         list.add(localDataUser);
                         adapter.notifyDataSetChanged();
@@ -129,6 +128,6 @@ public class ProkerFragment extends BaseFragment {
             }
         };
 
-        firebaseUtils.getAllValue(Constant.proker, valueEvent);
+        firebaseUtils.getAllValue(Constant.wisata, valueEvent);
     }
 }

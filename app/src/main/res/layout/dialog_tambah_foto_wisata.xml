@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/margin_big"
+    app:cardElevation="@dimen/margin_standard">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_rl_white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_big">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pilih_foto"
+            style="@style/textBigWhite"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="center"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnPickFoto"
+            android:layout_width="@dimen/width120"
+            android:layout_height="@dimen/width120"
+            android:layout_above="@+id/img_margin_4"
+            android:layout_below="@+id/text_edit_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:background="@drawable/border_circle_gray"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_camera_white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBatal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:padding="@dimen/margin_standard_big"
+            android:text="@string/batal"
+            android:textColor="@color/colorWhite"
+            android:theme="@style/customButton"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
