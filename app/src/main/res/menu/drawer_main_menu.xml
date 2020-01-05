@@ -39,8 +39,8 @@
         android:id="@+id/nav_grup5"
         android:visible="true">
         <item
-            n1:id="@+id/navProfil"
+            n1:id="@+id/navStruktur"
             android:icon="@drawable/ic_person_white"
-            n1:title="@string/profil_desa" />
+            n1:title="@string/struktur_desa" />
     </group>
 </menu>

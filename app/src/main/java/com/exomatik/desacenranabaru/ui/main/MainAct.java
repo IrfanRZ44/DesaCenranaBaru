@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.exomatik.desacenranabaru.R;
 import com.exomatik.desacenranabaru.base.BaseActivity;
 import com.exomatik.desacenranabaru.ui.location.LocationAct;
+import com.exomatik.desacenranabaru.ui.struktur.StrukturFragment;
 import com.exomatik.desacenranabaru.ui.proker.ProkerFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthLoginFragment;
 import com.exomatik.desacenranabaru.ui.auth.AuthAdminFragment;
@@ -107,9 +108,9 @@ public class MainAct extends BaseActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
                             , new WisataFragment()).commit();
                 }
-                else if (id == R.id.navProfil){
+                else if (id == R.id.navStruktur){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                            , new AuthAdminFragment()).commit();
+                            , new StrukturFragment()).commit();
                 }
 
                 drawer.closeDrawer(GravityCompat.START);

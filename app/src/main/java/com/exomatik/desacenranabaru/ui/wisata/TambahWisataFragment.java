@@ -117,7 +117,7 @@ public class TambahWisataFragment extends BaseFragment {
                 if (task.isSuccessful()) {
                     makeToast(Constant.addValueSucces);
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
-                            , new ProkerFragment()).commit();
+                            , new WisataFragment()).commit();
                 } else {
                     makeSnackbar(Constant.addValueFailed, R.drawable.snakbar_red);
                 }

@@ -35,8 +35,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import id.zelory.compressor.Compressor;
 
 public class TambahProkerFragment extends BaseFragment {
-    @Override
-    protected Integer getLayoutResource() { return R.layout.fragment_tambah_proker; }
+    @Override protected Integer getLayoutResource() { return R.layout.fragment_tambah_proker; }
     public static String locationPoint;
     private MaterialButton btnDone;
     private TextInputLayout etDesc, etTanggal, etLokasi, etNama;

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_standard">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_struktur_desa"
+            style="@style/textBigWhite"
+            android:textColor="@color/colorBlack"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textTitle"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaKepalaDesa"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_kepala_desa"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakKepalaDesa"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kontak_kepala_desa"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaKepalaSatgas"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Satuan Tugas"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakKepalaSatgas"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak Satuan Tugas"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaSekertarisDesa"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Sekertaris Desa"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakSekertarisDesa"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak Sekertaris Desa"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaDusunMalaka"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Dusun Malaka"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakDusunMalaka"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak Kepala Dusun Malaka"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaDusunArokke"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Dusun Arokke"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakDusunArokke"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak Kepala Dusun Arokke"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaDusunTanete"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Dusun Tanete"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakDusunTanete"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak Kepala Dusun Tanete"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaDusunMatanre"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Dusun Matanre"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakDusunMatanre"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak Kepala Dusun Matanre"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNamaDusunMaccini"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Dusun Maccini"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etKontakDusunMaccini"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak Kepala Dusun Maccini"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.exomatik.desacenranabaru.service.AviLoading.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="LineScaleIndicator"
+            android:id="@+id/progress"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard_big"
+            android:padding="@dimen/margin_standard_big"
+            android:text="@string/simpan"
+            android:textColor="@color/colorWhite"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

@@ -1,5 +1,7 @@
 package com.exomatik.desacenranabaru.utils;
 
+import java.util.ArrayList;
+
 public class Constant {
     public static String appName = "Desa Cenrana Baru";
     public static String kantorDesa = "Kantor Desa Cenrana Baru";
@@ -44,6 +46,7 @@ public class Constant {
     public static String wisata = "Wisata";
     public static String visi = "Visi";
     public static String misi = "Misi";
+    public static String struktur = "Struktur";
     public static String fotoProker = "FotoProker";
     public static String fotoWisata = "FotoWisata";
     public static String login = "Login";
@@ -63,5 +66,25 @@ public class Constant {
     public static String wantDeleteProker = "Apakah anda yakin ingin menghapus program kerja ini?";
     public static String wantDeleteFoto = "Apakah anda yakin ingin menghapus foto ini?";
 
+    public static String jabatan1 = "kepalaDesa";
+    public static String jabatan2 = "satgas";
+    public static String jabatan3 = "sekertarisDesa";
+    public static String jabatan4 = "malaka";
+    public static String jabatan5 = "arokke";
+    public static String jabatan6 = "tanete";
+    public static String jabatan7 = "matanre";
+    public static String jabatan8 = "maccini";
+
+    public static String[] listJabatan = {
+            "Kepala Desa", "Satuan Tugas", "Sekertaris Desa",
+            "Kepala Dusun Malaka", "Kepala Dusun Arokke", "Kepala Dusun Tanete",
+            "Kepala Dusun Matanre", "Kepala Dusun Maccini"
+    };
+
+    public static String[] listJbt = {
+            jabatan1, jabatan2, jabatan3,
+            jabatan4, jabatan5, jabatan6,
+            jabatan7, jabatan8
+    };
 
 }

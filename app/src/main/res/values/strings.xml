@@ -44,4 +44,8 @@
     <string name="foto_wisata">Foto Wisata :</string>
     <string name="pilih_foto">Pilih Foto</string>
     <string name="batal">Batal</string>
+    <string name="struktur_desa">Struktur Desa</string>
+    <string name="nama_kepala_desa">Nama Kepala Desa</string>
+    <string name="kontak_kepala_desa">Kontak Kepala Desa</string>
+    <string name="edit_struktur_desa">Edit Struktur Desa</string>
 </resources>
