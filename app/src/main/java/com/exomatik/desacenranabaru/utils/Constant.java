@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Constant {
     public static String appName = "Desa Cenrana Baru";
     public static String kantorDesa = "Kantor Desa Cenrana Baru";
-    public static String userName = "admin";
+    public static String userName = "desacenranabaru";
     public static String password = "kknuinam61";
     public static String latitude = "-4.98451";
     public static String longitude = "119.8211";

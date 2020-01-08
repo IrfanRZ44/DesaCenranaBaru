@@ -1,135 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="@dimen/margin_standard">
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_wisata"
-        style="@style/textBigWhite"
-        android:textColor="@color/colorBlack"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textTitle"
-        />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etNama"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/namaWisata"
-        android:textColorHint="@color/gray2"
-        app:errorEnabled="true"
-        app:errorTextAppearance="@style/error_appearance"
-        android:layout_marginTop="@dimen/margin_standard"
-        >
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_standard">
 
-        <com.google.android.material.textfield.TextInputEditText
-            style="@style/textStandardWhite"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="textStart"
+            android:text="@string/add_wisata"
+            style="@style/textBigWhite"
             android:textColor="@color/colorBlack"
-            android:imeOptions="actionNext"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textTitle"
             />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/text_small"
-        >
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etLokasi"
+            android:id="@+id/etNama"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/lokasi"
+            android:hint="@string/namaWisata"
             android:textColorHint="@color/gray2"
-            app:counterEnabled="true"
-            app:counterMaxLength="100"
-            android:layout_toLeftOf="@+id/btnPickAlamat"
-            android:layout_marginRight="@dimen/text_small"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
             >
 
             <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans"
-                android:lines="3"
-                android:maxLines="3"
-                android:textSize="@dimen/margin_standard_big"
-                android:textColor="@color/colorBlack"
-                android:inputType="textMultiLine"
-                android:imeOptions="actionNext"
-                android:focusable="false"
-                android:layout_gravity="start"
                 android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_small"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etLokasi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lokasi"
+                android:textColorHint="@color/gray2"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                android:layout_toLeftOf="@+id/btnPickAlamat"
+                android:layout_marginRight="@dimen/text_small"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:textSize="@dimen/margin_standard_big"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="textMultiLine"
+                    android:imeOptions="actionNext"
+                    android:focusable="false"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:src="@drawable/icon_pin_white"
+                app:civ_fill_color="@color/orange"
+                app:civ_border_color="@color/orange"
+                android:id="@+id/btnPickAlamat"
+                android:elevation="@dimen/margin_small"
+                />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etDesc"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/desc"
+            android:textColorHint="@color/gray2"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/margin_standard"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/textStandardWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:imeOptions="actionNext"
+                android:lines="3"
+                android:maxLines="5"
                 android:gravity="start"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="@dimen/margin_large"
-            android:layout_height="@dimen/margin_large"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:layout_marginRight="@dimen/margin_small"
-            android:src="@drawable/icon_pin_white"
-            app:civ_fill_color="@color/orange"
-            app:civ_border_color="@color/orange"
-            android:id="@+id/btnPickAlamat"
-            android:elevation="@dimen/margin_small"
+        <com.exomatik.desacenranabaru.service.AviLoading.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="LineScaleIndicator"
+            android:id="@+id/progress"
             />
-    </RelativeLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etDesc"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/desc"
-        android:textColorHint="@color/gray2"
-        app:errorEnabled="true"
-        app:errorTextAppearance="@style/error_appearance"
-        android:layout_marginTop="@dimen/margin_standard"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            style="@style/textStandardWhite"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorBlack"
-            android:imeOptions="actionNext"
-            android:lines="3"
-            android:maxLines="5"
-            android:gravity="start"
+            android:layout_marginTop="@dimen/margin_standard_big"
+            android:padding="@dimen/margin_standard_big"
+            android:text="@string/buat"
+            android:textColor="@color/colorWhite"
             />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.exomatik.desacenranabaru.service.AviLoading.AVLoadingIndicatorView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:indicatorColor="@color/colorPrimary"
-        app:indicatorName="LineScaleIndicator"
-        android:id="@+id/progress"
-        />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnDone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_standard_big"
-        android:padding="@dimen/margin_standard_big"
-        android:text="@string/buat"
-        android:textColor="@color/colorWhite"
-        />
-</androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>
